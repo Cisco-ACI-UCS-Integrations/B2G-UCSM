@@ -1,0 +1,1 @@
+nohup nice -19 php ./b2g.php -runAsDaemon 2> /dev/null & echo $! > runningProcessId
