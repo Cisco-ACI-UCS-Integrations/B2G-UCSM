@@ -1,0 +1,42 @@
+To customize the IP setup on this virtual appliance, run the setup script in the B2G_VM_Config directory
+
+
+
+To get help, enter the directory for CIMC standalone or UCSM and type php ./b2g.php -help
+
+
+
+This tool can run as an instance for a group of UCS C series standalone servers, or separately to manage a UCSM domain. One instance of this tool does 
+not simultaneously do both situations.
+
+This tools does the set of C series under the 
+CIMC directory in the APIC-UCS-B2G-v1.0.1f folder.  
+This does a single UCSM domain under the UCSM directory in the APIC-UCS-B2G-v1.0.1f folder.
+
+
+
+To manage multiple groupings of C series servers, just run this tool one time in the CIMC directory, with the servers identified in the B2G.init file.  
+	This tool handles multiple 
+groupings of C series rack servers.
+
+
+
+To manage multiple UCSM domains, we would need to copy the UCSM directory contents for each instance and update the domain in the B2G.init file.  
+	This tool handles just a single
+UCSM domain today, but will add multiples in a coming update.
+
+
+
+To start the program normally, enter the directory for CIMC standalone or UCSM and type ./runB2G	
+		(this will run in your terminal and give real-time feedback, and you can tail -f the debug.out for added information)
+
+To start the program but put in the background, enter the directory for CIMC standalone or UCSM and type ./runB2G-bg	
+		(this will then run in background - and you can tail -f the nohup.out for real-time feedback)
+
+We have installed the samba service, so you should be able to mount from your Windows (explorer -> \\IP of VM) or Mac (finder -> go -> connect to server) device.
+
+
+
+
+For questions, please email aci-ucs-b2g@cisco.com
+
